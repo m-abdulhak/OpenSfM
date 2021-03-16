@@ -244,6 +244,7 @@ def shot_to_json(shot):
         "rotation": list(shot.pose.rotation),
         "translation": list(shot.pose.translation),
         "camera": shot.camera.id,
+        "origin": shot.pose.get_origin(),
     }
 
     if shot.metadata is not None:
